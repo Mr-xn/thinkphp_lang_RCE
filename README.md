@@ -25,7 +25,8 @@ ThinkPHP v5.1.42
 
 ## vuln ENV
 
-docker pull 7coinsec/thinkphp6013_lang_on
+docker pull 7coinsec/thinkphp6013_lang_on  
+
 docker run -it -d -p 8080:80 7coinsec/thinkphp6013_lang_on
 
 ## EXP
